@@ -111,6 +111,24 @@
       margin: 5px;
     }
 
+    .column_ladders::before {
+      content: attr(data-price);
+      position: absolute;
+      top: 135px;
+      left: 10px;
+      width: 60px;
+      height: 60px;
+      background-color: #ED1C24;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      z-index: 1;
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
     .column_ladders img {
       position: relative;
       max-width: 100%;
