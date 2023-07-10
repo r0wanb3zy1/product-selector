@@ -30,17 +30,40 @@
       margin-bottom: 10px;
     }
 
+    .application input[type="radio"] {
+      appearance: none;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #999;
+      transition: 0.2s all linear;
+      margin-right: 5px;
+      position: relative;
+      top: 3px;
+    }
+
+    .application input[type="radio"]:checked {
+      border: 5px solid #ED1C24;
+    }
+
     .radio-group {
       display: inline-block;
     }
 
     input[type="text"] {
-      width: 85px;
-      padding: 5px;
-      margin-bottom: 10px;
+      width: 90px;
+      padding: 3px 5px 3px 5px;
+      margin-bottom: 12px;
       margin-left: 8px;
-      border: 1px solid #ccc;
+      border: 2px solid #999;
       border-radius: 4px;
+      outline: none;
+      color: #ED1C24;
+      font-weight: bold;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ED1C24;
     }
 
     .result {
@@ -52,19 +75,21 @@
     button {
       display: block;
       width: 100%;
-      background-color: #A0A0A0;
+      padding: 10px 20px;
+      background-color: #ED1C24;
+      border: 1px solid #ED1C24;
       color: white;
-      font-size: 16px;
-      padding: 10px 0;
-      border: none;
+      text-decoration: none;
       border-radius: 4px;
-      cursor: pointer;
-      margin-top: 5px;
-      transition: background-color 0.3s ease;
+      transition-duration: 0.5s;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     button:hover {
-      background-color: #808080;
+      background-color: #fff;
+      color: #ED1C24;
     }
 
     .container_ladders {
@@ -84,24 +109,6 @@
       background-color: WhiteSmoke;
       box-sizing: border-box;
       margin: 5px;
-    }
-
-    .column_ladders::before {
-      content: attr(data-price);
-      position: absolute;
-      top: 135px;
-      left: 10px;
-      width: 60px;
-      height: 60px;
-      background-color: #ED1C24;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      z-index: 1;
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
     }
 
     .column_ladders img {
@@ -150,12 +157,11 @@
       transition-duration: 0.5s;
       font-family: Arial, sans-serif;
       font-weight: bold;
+      font-size: 18px;
     }
 
     .button_ladders:hover {
-      background-color: #cb1016;
-      background-color: white;
-      border: 1px solid #ED1C24;
+      background-color: #fff;
       color: #ED1C24;
     }
 
