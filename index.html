@@ -2,189 +2,232 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sellwood Attic Ladder Selector</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
-    .container {
-      max-width: 800px;
-      margin: 0px auto;
-      padding: 0;
-    }
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0;
+}
 
-    h1 {
-      font-size: 22px;
-      margin-top: 0;
-      background-color: WhiteSmoke;
-      padding: 5px;
-    }
+h1 {
+  font-size: 22px;
+  margin-top: 0;
+  background-color: WhiteSmoke;
+  padding: 5px;
+}
 
-    .container_ladders {
-      max-width: 100%;
-      margin-top: -10px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.container_ladders {
+  max-width: 100%;
+  margin-top: -10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .ladder::before {
-      content: attr(data-price);
-      position: absolute;
-      top: 125px;
-      left: 20px;
-      width: 60px;
-      height: 60px;
-      background-color: rgba(255, 255, 255, 0.6);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ED1C24;
-      font-weight: bold;
-      z-index: 1;
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
-    }
+.ladder::before {
+  content: attr(data-price);
+  position: absolute;
+  top: 125px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ED1C24;
+  font-weight: bold;
+  z-index: 1;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+}
 
-    .ladder {
-      position: relative;
-      text-align: center;
-      max-width: 200px;
-      width: 100%;
-      background-color: WhiteSmoke;
-      box-sizing: border-box;
-      margin: 5px;
-    }
+.ladder {
+  position: relative;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  background-color: WhiteSmoke;
+  box-sizing: border-box;
+  margin: 5px;
+}
 
-    .ladder img {
-      position: relative;
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 6px;
-      z-index: 0;
-    }
+.ladder img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 6px;
+  z-index: 0;
+}
 
-    .ladder h2 {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      margin-bottom: -5px;
-    }
+.ladder h2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: -5px;
+}
 
-    .ladder p {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      line-height: 1.5;
-    }
+.ladder p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
 
-    .ladder div {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      line-height: 1.5;
-      color: red;
-      margin-top: 10px;
-      font-weight: bold;
-    }
+.ladder div {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-    hr.line {
-      border-top: 1.5px solid red;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
+hr.line {
+  border-top: 1.5px solid red;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
-    .button_ladders {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ED1C24;
-      border: 1px solid #ED1C24;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      transition-duration: 0.5s;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 18px;
-    }
+.button_ladders {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ED1C24;
+  border: 1px solid #ED1C24;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition-duration: 0.5s;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
 
-    .button_ladders:hover {
-      background-color: #fff;
-      color: #ED1C24;
-    }
+.button_ladders:hover {
+  background-color: #fff;
+  color: #ED1C24;
+}
 
-    input[type="text"] {
-      width: 80px;
-      padding: 4px;
-      margin-left: 5px;
-      border: 2px solid #999;
-      border-radius: 4px;
-      outline: none;
-      color: #ED1C24;
-      font-weight: bold;
-    }
+input[type="text"] {
+  width: 80px;
+  padding: 4px;
+  margin-left: 5px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  outline: none;
+  color: #ED1C24;
+  font-weight: bold;
+}
 
-    input[type="text"]::placeholder {
-      color: black;
-      font-weight: normal;
-    }
+input[type="text"]::placeholder {
+  color: black;
+  font-weight: normal;
+}
 
-    input[type="text"]:focus {
-      border-color: #ED1C24;
-    }
+input[type="text"]:focus {
+  border-color: #ED1C24;
+}
 
-    .filter {
-      margin: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 100%;
-    }
+.filter {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
 
-    .filter label {
-      display: inline-block;
-      margin-right: 5px;
-      margin-bottom: 0px;
-    }
+.filter label {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
 
-    .filter input[type="radio"] {
-      appearance: none;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #999;
-      transition: 0.2s all linear;
-      margin-right: 5px;
-      position: relative;
-      margin-bottom: -2.5px;
-    }
+.filter input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  margin-bottom: -2.5px;
+}
 
-    .filter input[type="radio"]:checked {
-      border: 5px solid #ED1C24;
-    }
+.filter input[type="radio"]:checked {
+  border: 5px solid #ED1C24;
+}
 
-    .filter-result {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #ED1C24;
-    }
+.filter-result {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ED1C24;
+}
 
-    .radio-group {
-      display: inline-block;
-    }
+.radio-group {
+  display: inline-block;
+}
 
-    /* Responsive Styles */
-    @media only screen and (max-width: 600px) {
-      .container {
-        max-width: 100%;
-      }
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
 
-      .ladder {
-        max-width: 100%;
-      }
-    }
+  .container_ladders {
+    padding: 10px;
+  }
+
+  .ladder {
+    max-width: 100%;
+  }
+
+  .ladder::before {
+    top: 80px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .ladder img {
+    margin-bottom: 3px;
+  }
+
+  .ladder h2 {
+    font-size: 16px;
+  }
+
+  .ladder p {
+    font-size: 10px;
+  }
+
+  hr.line {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .button_ladders {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    width: 60px;
+    padding: 2px;
+    margin-left: 3px;
+    font-size: 10px;
+  }
+}
   </style>
   <script>
     // JavaScript code
